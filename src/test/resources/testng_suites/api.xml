@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Carina Demo Tests - API Sample" parallel="methods" thread-count="5">
+	<test name="User API tests">
+		<classes>
+			<class name="com.solvd.luciano.carina.CarinaApiTest" />
+		</classes>
+	</test>
+
+</suite>
