@@ -20,7 +20,10 @@ public class CpuPage extends AbstractPage {
 
 	@FindBy(xpath = "//a[@class='OneLinkNoTx']")
 	private List<CpuItem> cpus;
-
+	
+	@FindBy(xpath = "//a[@class='OneLinkNoTx']")
+	private CpuInfoPage cpuInfo;
+	
 	public CpuPage(WebDriver driver) {
 		super(driver);
 		setPageURL("/compare/best-cpus");
@@ -29,9 +32,12 @@ public class CpuPage extends AbstractPage {
 	public List<CpuItem> searchCpus(String s) {
 		searchTextField.type(s);
 		searchTextField.sendKeys(Keys.ENTER);
-
 		pause(3);
 		return cpus;
+	}
+	
+	public CpuInfoPage openCpuInfoPage() {
+		return cpuInfo;
 	}
 
 }
