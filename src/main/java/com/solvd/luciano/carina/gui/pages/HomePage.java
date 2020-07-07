@@ -8,22 +8,19 @@ import com.solvd.luciano.carina.gui.components.FooterMenu;
 import com.solvd.luciano.carina.gui.components.compare.WeValuePrivacyAd;
 
 public class HomePage extends AbstractPage {
-    
-    
-    @FindBy(id = "footer")
-    private FooterMenu footerMenu;
 
-   
-    public HomePage(WebDriver driver) {
-        super(driver);
-    }
+	@FindBy(id = "footer")
+	private FooterMenu footerMenu;
 
-    public FooterMenu getFooterMenu() {
-        return footerMenu;
-    }
+	public HomePage(WebDriver driver) {
+		super(driver);
+	}
 
-       
-    public WeValuePrivacyAd getWeValuePrivacyAd() {
-    	return new WeValuePrivacyAd(driver);
-    }
+	public FooterMenu getFooterMenu() {
+		return footerMenu;
+	}
+
+	public WeValuePrivacyAd getWeValuePrivacyAd() {
+		return new WeValuePrivacyAd(driver);
+	}
 }

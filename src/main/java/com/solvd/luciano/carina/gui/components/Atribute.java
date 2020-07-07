@@ -7,17 +7,17 @@ import org.openqa.selenium.support.FindBy;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
 
-public class NewsItem extends AbstractUIObject {
+public class Atribute extends AbstractUIObject {
 
 	@FindBy(xpath = "./a")
-	private ExtendedWebElement titleLink;
+	private ExtendedWebElement atribute;
 
-	public NewsItem(WebDriver driver, SearchContext searchContext) {
+	public Atribute(WebDriver driver, SearchContext searchContext) {
 		super(driver, searchContext);
 	}
 
-	public String readTitle() {
-		return titleLink.getElement().getText();
+	public String readAtribute() {
+		return atribute.getElement().getText();
 	}
 
 }

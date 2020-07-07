@@ -1,4 +1,4 @@
-package com.solvd.luciano.carina.gui.components;
+package com.solvd.luciano.carina.gui.pages;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.solvd.luciano.carina.gui.components.CpuItem;
 
 public class CpuPage extends AbstractPage {
 

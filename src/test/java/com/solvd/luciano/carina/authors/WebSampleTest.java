@@ -15,8 +15,8 @@ import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.core.foundation.dataprovider.annotations.XlsDataSourceParameters;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.solvd.luciano.carina.gui.components.CpuItem;
-import com.solvd.luciano.carina.gui.components.CpuPage;
 import com.solvd.luciano.carina.gui.components.FooterMenu;
+import com.solvd.luciano.carina.gui.pages.CpuPage;
 import com.solvd.luciano.carina.gui.pages.HomePage;
 
 /**
@@ -39,7 +39,7 @@ public class WebSampleTest extends AbstractTest {
 
 		homePage.getWeValuePrivacyAd().closeAdIfPresent();
 
-		homePage = new HomePage(getDriver());
+		//homePage = new HomePage(getDriver());
 //        BrandModelsPage productsPage = homePage.selectBrand(brand);
 //
 //        ModelInfoPage productInfoPage = productsPage.selectModel(model);
