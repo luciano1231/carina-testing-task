@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.solvd</groupId>
 	<artifactId>luciano.carina</artifactId>
-	<version>1.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Carina Demo</name>
 	<url>http://www.qaprosoft.com/</url>
@@ -36,7 +36,7 @@
 	</repositories>
 
 	<dependencies>
-		
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>

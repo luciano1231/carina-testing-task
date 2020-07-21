@@ -11,7 +11,7 @@ import io.restassured.path.json.JsonPath;
 
 import org.testng.annotations.Test;
 
-public class authorsAPITest extends AbstractTest {
+public class AuthorsAPITest extends AbstractTest {
 	
 	@Test
 	@MethodOwner (owner = "Luciano Jensen")

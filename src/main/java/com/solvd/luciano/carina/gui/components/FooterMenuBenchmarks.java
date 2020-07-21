@@ -7,9 +7,9 @@ import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebEleme
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
 import com.solvd.luciano.carina.gui.pages.CpuPage;
 
-public class FooterMenu extends AbstractUIObject {
+public class FooterMenuBenchmarks extends AbstractUIObject {
 
-	public FooterMenu(WebDriver driver, SearchContext searchContext) {
+	public FooterMenuBenchmarks(WebDriver driver, SearchContext searchContext) {
 		super(driver, searchContext);
 
 	}

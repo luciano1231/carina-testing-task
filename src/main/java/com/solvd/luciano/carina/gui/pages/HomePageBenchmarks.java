@@ -4,19 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.solvd.luciano.carina.gui.components.FooterMenu;
+import com.solvd.luciano.carina.gui.components.FooterMenuBenchmarks;
 import com.solvd.luciano.carina.gui.components.compare.WeValuePrivacyAd;
 
-public class HomePage extends AbstractPage {
+public class HomePageBenchmarks extends AbstractPage {
 
 	@FindBy(id = "footer")
-	private FooterMenu footerMenu;
+	private FooterMenuBenchmarks footerMenu;
 
-	public HomePage(WebDriver driver) {
+	public HomePageBenchmarks(WebDriver driver) {
 		super(driver);
 	}
 
-	public FooterMenu getFooterMenu() {
+	public FooterMenuBenchmarks getFooterMenu() {
 		return footerMenu;
 	}
 
