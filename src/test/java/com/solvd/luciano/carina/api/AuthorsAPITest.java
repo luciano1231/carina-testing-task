@@ -32,7 +32,7 @@ public class AuthorsAPITest extends AbstractTest {
 	public void createAuthorsNegativeTest() {
 		PostAuthorMethod postAuthorMethod = new PostAuthorMethod();
 		postAuthorMethod.removeProperty("ID");
-		postAuthorMethod.expectResponseStatus(HttpResponseStatusType.BAD_REQUEST_400);
+		postAuthorMethod.expectResponseStatus(HttpResponseStatusType.BAD_REQUEST_400); // must be 200
 		postAuthorMethod.callAPI().asString();
 		postAuthorMethod.validateResponse();
 		
@@ -40,7 +40,7 @@ public class AuthorsAPITest extends AbstractTest {
 	}
 	@Test
 	@MethodOwner (owner = "Luciano Jensen")
-	public void getAuthortsTest() {
+	public void getAuthortsTest() {//OK
 		GetAuthorsMethod getAuthorsMethod = new GetAuthorsMethod();
 		getAuthorsMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
 		getAuthorsMethod.callAPI();
