@@ -1,4 +1,4 @@
-package com.solvd.luciano.carina.authors;
+package com.solvd.luciano.carina.api;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
@@ -15,7 +15,7 @@ public class AuthorsAPITest extends AbstractTest {
 	
 	@Test
 	@MethodOwner (owner = "Luciano Jensen")
-	public void createAuthorsTest() {
+	public void createAuthorsTest() {//OK
 		PostAuthorMethod postAuthorMethod = new PostAuthorMethod();
 		postAuthorMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
 		String rs=postAuthorMethod.callAPI().asString();

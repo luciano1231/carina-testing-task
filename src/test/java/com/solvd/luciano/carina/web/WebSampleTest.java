@@ -23,47 +23,55 @@ import com.solvd.luciano.carina.gui.pages.HomePageBenchmarks;
 import com.solvd.luciano.carina.service.Isearch;
 
 public class WebSampleTest extends AbstractTest implements Isearch {
+//
+//	@Test
+//	@TestPriority(Priority.P1)
+//	public void testModelSpecs(String Model, String Socket, String TDP, String score3DMark) {		
+//		CpuInfoPage cpuInfoPage = login(getDriver());
+//		
+//	}
 
-	@Test(dataProvider = "SingleDataProvider")
+	@Test(dataProvider = "SingleDataProvider", description = "LUC")
+	@MethodOwner(owner = "Luciano")
 	@TestPriority(Priority.P1)
 	@TestTag(name = "area test", value = "data provider")
 	@TestTag(name = "specialization", value = "xlsx")
-	@XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "benchmarks", dsUid = "TUID", dsArgs = "Model, Socket, TDP, score3DMark")
-	public void testModelSpecs(String Model, String Socket, String TDP, String score3DMark) {
+	@XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "2ndTest", dsUid = "TUID", dsArgs = "search")
+	public void testNewsSearch(String search) throws Throwable {
+		HomePageBenchmarks homePage = new HomePageBenchmarks(getDriver());
+		homePage.open();
+		Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+		CpuPage cpuPage = homePage.getFooterMenu().openCpuPage();
 
+		Assert.assertTrue(cpuPage.isPageOpened(), "Cpus page is not opened!");
 
-		
-		CpuInfoPage cpuInfoPage = login(getDriver());
-
-		Assert.assertEquals(cpuInfoPage.readSocket(), Socket, "Invalid Socket info!");
-		Assert.assertEquals(cpuInfoPage.readTdp(), TDP, "Invalid TDP info!");
-		Assert.assertEquals(cpuInfoPage.readScore(), score3DMark, "Invalid score3DMark info!");
+		List<CpuItem> cpus = cpuPage.searchCpus(search);//
+		Assert.assertTrue(CollectionUtils.isNotEmpty(cpus), "Cpus not found!");
+		for (CpuItem c : cpus) {			
+			Assert.assertTrue(StringUtils.containsIgnoreCase(c.readTitle(), search), "Invalid search results!");
+		}
 	}
 
 //	@Test(dataProvider = "SingleDataProvider", description = "LUC")
 //	@MethodOwner(owner = "Luciano")
-//	@TestPriority(Priority.P2)
+//	@TestPriority(Priority.P3)
 //	@TestTag(name = "area test", value = "data provider")
 //	@TestTag(name = "specialization", value = "xlsx")
-//	@XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "2ndTest", dsUid = "TUID", dsArgs = "search")
-//	public void testNewsSearch(String search) throws Throwable {
+//	@XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "benchmarks", dsUid = "TUID", dsArgs = "search, socket, score")
+//	public void testCompare(String search,String socket, String score) throws Throwable {
 //		HomePageBenchmarks homePage = new HomePageBenchmarks(getDriver());
 //		homePage.open();
 //		Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
 //
-//		System.out.println("HOME OPENED");
-//		
 //		CpuPage cpuPage = homePage.getFooterMenu().openCpuPage();
-//		System.out.println("CPUS OPENED");
 //		Assert.assertTrue(cpuPage.isPageOpened(), "Cpus page is not opened!");
 //
-//		
 //		List<CpuItem> cpus = cpuPage.searchCpus(search);
-//		Assert.assertTrue(CollectionUtils.isEmpty(cpus), "Cpus not found!");
-//		for (CpuItem c : cpus) {
-//			System.out.println(c.readTitle());
-//			Assert.assertTrue(StringUtils.containsIgnoreCase(c.readTitle(), search), "Invalid search results!");
-//		}
+//		Assert.assertTrue(CollectionUtils.isNotEmpty(cpus), "Cpus not found!");
+//		CpuInfoPage cpuInfo = cpus.get(0).openCpuInfoPage();
+//		
+//		Assert.assertEquals(cpuInfo.readSocket(), socket, "Invalid Socket info! or has changed");
+//		Assert.assertEquals(cpuInfo.readSocket(), score, "Invalid Score info! or has changed");
 //	}
 
 }

@@ -21,8 +21,8 @@ public class CpuPage extends AbstractPage {
 	@FindBy(xpath = "//a[@class='OneLinkNoTx']")
 	private List<CpuItem> cpus;
 	
-	@FindBy(xpath = "//a[@class='OneLinkNoTx']")
-	private CpuInfoPage cpuInfo;
+//	@FindBy(xpath = "//a[@class='OneLinkNoTx']")
+//	private CpuInfoPage cpuInfo;
 	
 	public CpuPage(WebDriver driver) {
 		super(driver);
@@ -37,7 +37,9 @@ public class CpuPage extends AbstractPage {
 	}
 	
 	public CpuInfoPage openCpuInfoPage() {
-		return cpuInfo;
+		//primer elemento de la lista
+		cpus.get(0).openCpuInfoPage();
+		return new CpuInfoPage(driver);
 	}
 
 }

@@ -7,13 +7,13 @@ import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebEleme
 import com.qaprosoft.carina.core.gui.AbstractPage;
 
 public class CpuInfoPage extends AbstractPage {
-	@FindBy(xpath = "//span[@class='score-large']")
+	@FindBy(xpath = "//span[@class='result-pimp-badge-score-item']")
 	private ExtendedWebElement score;
 
 	@FindBy(xpath = "//span[@class='score-large OneLinkNoTx']")
 	private ExtendedWebElement tdp;
 
-	@FindBy(css = ".help-expansion strong")
+	@FindBy(xpath ="//span[@class='score-large OneLinkNoTx']") 
 	private ExtendedWebElement socket;
 
 	public CpuInfoPage(WebDriver driver) {
