@@ -1,11 +1,8 @@
-package com.solvd.luciano.carina.api;
+package com.solvd.luciano.carina.api.authors;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
-import com.solvd.luciano.carina.api.GetAuthorMethod;
-import com.solvd.luciano.carina.api.GetAuthorsMethod;
-import com.solvd.luciano.carina.api.PostAuthorMethod;
 
 import io.restassured.path.json.JsonPath;
 

@@ -1,0 +1,5 @@
+{
+    <#if albumId??> "albumId": ${albumId},</#if>
+    "id": "${id}",
+    "title": "${title}"
+}

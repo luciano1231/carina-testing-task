@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ID": {
+        "type": "integer"
+      },
+      "UserName": {
+        "type": "string"
+      },
+      "Password": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": true,
+    "required": [
+      "ID",
+      "UserName",
+      "Password"
+    ]
+  },
+  "additionalItems": true
+}

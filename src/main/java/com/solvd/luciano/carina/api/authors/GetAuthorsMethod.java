@@ -1,4 +1,4 @@
-package com.solvd.luciano.carina.api;
+package com.solvd.luciano.carina.api.authors;
 
 import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;

@@ -1,5 +1,5 @@
 {
   "ID": 333,
-  <#if UserName??>"UserName": "${UserName}",</#if>
-    <#if Password??>"Password": "${Password}",</#if>
+  <#if UserName??>"UserName": ${UserName},</#if>
+    <#if Password??>"Password": ${Password},</#if>
 }
